@@ -1,0 +1,25 @@
+- job:
+    block-downstream: false
+    block-upstream: false
+    builders:
+    - batch: |-
+        dir
+        echo "Hello"
+    concurrent: false
+    description: "\u6D4B\u8BD5job"
+    disabled: false
+    name: !!python/unicode 'test'
+    project-type: freestyle
+    publishers: []
+    scm:
+    - git:
+        branches:
+        - '*/master'
+        url: https://github.com/openstack-infra/jenkins-job-builder.git
+    triggers:
+    - timed: H/15 * * * *
+    wrappers:
+    - timestamps
+    - raw:
+        xml: |
+          <hudson.tasks.AntWrapper plugin="ant@1.8" />
