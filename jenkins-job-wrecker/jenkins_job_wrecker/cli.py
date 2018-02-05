@@ -1,4 +1,5 @@
 # encoding=utf8
+from __future__ import absolute_import,unicode_literals,print_function
 import argparse
 from argparse import ArgumentDefaultsHelpFormatter
 import errno
@@ -193,7 +194,9 @@ def main():
                         'connect to Jenkins' % err)
         username = 'admin'
         password = 'admin'
-        server = jenkins.Jenkins(args.jenkins_server,
+        jenkins_server = 'http://localhost:8080'
+        # server = jenkins.Jenkins(args.jenkins_server,
+        server = jenkins.Jenkins(jenkins_server,
                                  username=username,
                                  password=password)
 

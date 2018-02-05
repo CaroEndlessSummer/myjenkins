@@ -8,7 +8,7 @@
     concurrent: false
     description: "\u6D4B\u8BD5job<!-- Managed by Jenkins Job Builder -->"
     disabled: false
-    !!python/unicode 'name': !!python/unicode 'test'
+    !!python/unicode 'name': !!python/unicode 'test3'
     !!python/unicode 'project-type': freestyle
     publishers: []
     scm:

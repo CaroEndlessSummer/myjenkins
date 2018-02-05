@@ -5,17 +5,23 @@
     - batch: |-
         dir
         echo "Hello"
+        echo "world"
+    - shell: |-
+        ls
+        echo hello world
+    - shell: |-
+        echo 1111 1111 ≤‚ ‘
     concurrent: false
     description: "\u6D4B\u8BD5job<!-- Managed by Jenkins Job Builder -->"
     disabled: false
-    !!python/unicode 'name': !!python/unicode 'test'
+    !!python/unicode 'name': !!python/unicode 'test6'
     !!python/unicode 'project-type': freestyle
     publishers: []
     scm:
     - git:
         branches:
         - '*/master'
-        git-tool: Default
+        credentials-id: github
         name: origin
         refspec: +refs/heads/*:refs/remotes/origin/*
         url: https://github.com/openstack-infra/jenkins-job-builder.git

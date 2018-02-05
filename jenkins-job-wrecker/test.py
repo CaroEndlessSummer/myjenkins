@@ -1,10 +1,11 @@
+# encoding: utf-8
 __author__ = 'caro'
 #!/usr/bin/env python
-# encoding: utf-8
-from __future__ import absolute_import, unicode_literals, print_function
+
+# from __future__ import absolute_import, unicode_literals, print_function
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+# reload(sys)
+# sys.setdefaultencoding('utf-8')
 import os
 
 cur_path = os.path.split(__file__)[0]
@@ -36,4 +37,31 @@ def update_config():
 if __name__ == '__main__':
     # get_config()
     # commit_config()
-    update_config()
+    # update_config()
+    # --conf  D:\github\myjenkins\jenkins-job-builder\jenkins_jobs.ini update D:\github\myjenkins\jenkins-job-wrecker\jenkins_job_wrecker\output\test.yml test2
+    u = unicode('\u6d4b\u8bd5', 'unicode_escape')
+    print(u)
+    # f = open(r'D:\github\myjenkins\jenkins-job-wrecker\jenkins_job_wrecker\output\test4.yml', 'r')
+    # st = f.read()
+    # print(type(st))
+    mse = u'测试'
+    print(type(mse))
+    print(mse)
+    # print(mse.decode('utf-8').encode('unicode_escape'))
+
+    m = '测试'
+    print(type(m))
+    print(m.decode('utf-8').encode('unicode_escape'))
+    # print(m.decode('utf-8').encode('unicode_escape'))
+    # f = open('text.txt', 'w')
+    # f.write(m)
+    # f.write(m.decode('utf-8').encode('unicode_escape'))
+    # # f.close()
+    m = open(r'D:\github\myjenkins\jenkins-job-wrecker\jenkins_job_wrecker\output\test4.yml', 'r')
+    n = m.read()
+    for line in n.decode('utf-8'):
+        print(line)
+        # print(line.decode('gbk').encode('unicode_escape'))
+    # print(type(n))
+    # l = unicode(n, 'unicode_escape')
+    # print(l)
